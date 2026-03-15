@@ -13,6 +13,8 @@ import {
   Binary,
   Workflow,
 } from 'lucide-react'
+import profileImage from './assets/profile.JPG'
+import cvFile from './assets/cv.pdf'
 
 export default function App() {
   const navItems = [
@@ -224,8 +226,8 @@ export default function App() {
             </a>
 
             <a
-              href="/Omar_Mohamed_CV.pdf"
-              download
+              href={cvFile}
+              download="Omar_Mohamed_CV.pdf"
               className="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-cyan-300/30 hover:bg-white/10"
             >
               <Download size={16} />
@@ -247,7 +249,7 @@ export default function App() {
               <div className="space-y-4">
                 <div className="mx-auto h-56 w-56 overflow-hidden rounded-[28px] border border-cyan-300/15 bg-slate-900 md:h-64 md:w-full">
                   <img
-                    src="/profile.jpg"
+                    src={profileImage}
                     alt="Omar Mohamed"
                     className="h-full w-full object-cover"
                   />
@@ -323,9 +325,21 @@ export default function App() {
             transition={{ duration: 0.65, delay: 0.08 }}
             className="grid gap-4"
           >
-            <InfoCard icon={Microchip} title="RTL-Oriented Thinking" text="Focused on writing structured Verilog and SystemVerilog with attention to architecture, modularity, and implementation tradeoffs." />
-            <InfoCard icon={Workflow} title="Verification Awareness" text="Interested in testbench development, assertions, coverage-oriented thinking, and reliable validation of digital behavior." />
-            <InfoCard icon={Cpu} title="Implementation Flow" text="Comfortable moving from design and simulation to synthesis, timing review, and FPGA-oriented workflow." />
+            <InfoCard
+              icon={Microchip}
+              title="RTL-Oriented Thinking"
+              text="Focused on writing structured Verilog and SystemVerilog with attention to architecture, modularity, and implementation tradeoffs."
+            />
+            <InfoCard
+              icon={Workflow}
+              title="Verification Awareness"
+              text="Interested in testbench development, assertions, coverage-oriented thinking, and reliable validation of digital behavior."
+            />
+            <InfoCard
+              icon={Cpu}
+              title="Implementation Flow"
+              text="Comfortable moving from design and simulation to synthesis, timing review, and FPGA-oriented workflow."
+            />
           </motion.div>
         </div>
       </SectionShell>
@@ -457,8 +471,18 @@ export default function App() {
         <div className="grid gap-4 md:grid-cols-2">
           <ContactCard icon={Mail} title="Email" href="mailto:omar7030.mo@gmail.com" value="omar7030.mo@gmail.com" />
           <ContactCard icon={Phone} title="Phone" href="tel:+201021539038" value="(+20) 1021539038" />
-          <ContactCard icon={Linkedin} title="LinkedIn" href="https://www.linkedin.com/in/omar-mohamed-abdelsalam" value="linkedin.com/in/omar-mohamed-abdelsalam" />
-          <ContactCard icon={Github} title="GitHub" href="https://github.com/OmarMohamedAbdelsalam" value="github.com/OmarMohamedAbdelsalam" />
+          <ContactCard
+            icon={Linkedin}
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/omar-mohamed-abdelsalam"
+            value="linkedin.com/in/omar-mohamed-abdelsalam"
+          />
+          <ContactCard
+            icon={Github}
+            title="GitHub"
+            href="https://github.com/OmarMohamedAbdelsalam"
+            value="github.com/OmarMohamedAbdelsalam"
+          />
         </div>
       </SectionShell>
 
